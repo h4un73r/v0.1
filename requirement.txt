@@ -1,0 +1,6 @@
+re
+requests
+argparse
+terminal_banner
+urlparse
+colorama
