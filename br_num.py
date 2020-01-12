@@ -16,7 +16,7 @@ parser.add_argument("-f", "--file", help="file attack", action="store_true")
 
 # read arguments from the command line
 args = parser.parse_args()
-payloads = ['"><svg/onload=alert(0)>'] #file in comming 
+payloads = ['"><svg/onload=alert(0)>'] #file more forward
 
 # check for --version or -V
 if args.version:
@@ -57,7 +57,7 @@ if args.url:
                     
                 response = requests.get(urlparse.urlunparse(parsed))
 
-                if inj in response.text: #scrap pendiente por mejorar
+                if inj in response.text: #grep pendiente por mejorar
                     
                     bba = "\n" + (Fore.GREEN + "La pagina web("+ str(response.status_code) +") es vulnerable en el parametro: "+ Fore.BLUE + twParam +Style.RESET_ALL) + "\n"
                     bann = terminal_banner.Banner(bba)
