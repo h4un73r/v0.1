@@ -11,12 +11,12 @@ colorama.init()
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-v", "--version", help="show program version", action="store_true")
-parser.add_argument("-u", "--url",dest='url', default=None, help="url attack", action="store")
+parser.add_argument("-u", "--url",dest='url', default=None, help="url attack: http://www.target.com/?s=1&x=2&y=3", action="store")
 parser.add_argument("-f", "--file", help="file attack", action="store_true")
 
 # read arguments from the command line
 args = parser.parse_args()
-payloads = ['"><svg/onload=alert(0)>']
+payloads = ['"><svg/onload=alert(0)>'] #file in comming 
 
 # check for --version or -V
 if args.version:
